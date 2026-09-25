@@ -1,23 +1,56 @@
 aid: aoquan
 name: Aoquan
-description: 'Aoquan is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: Auquan (formerly Aoquan) provides agentic AI solutions for institutional finance, automating data collection, analysis, and reporting
+  workflows. Their platform enables finance professionals to reduce manual effort, accelerate decision‑making, and focus on strategic insights
+  across credit, sustainability, and investor relations. The company offers a suite of AI‑driven tools, a sandbox environment, and integrations
+  that streamline complex financial processes.
 url: https://raw.githubusercontent.com/api-evangelist/aoquan/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-09-25'
 modified: '2026-09-25'
 tags:
 - Company
-apis: []
+- Finance
+- AI
+- Automation
+- Institutional
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Vendors
+  url: vendors/aoquan-vendors.yml
+- type: LLMsTxt
+  url: llms/aoquan-llms.txt
+- type: Hosts
+  url: hosts/aoquan-hosts.yml
+- type: DomainSecurity
+  url: security/aoquan-domain-security.yml
 - type: Website
   url: https://equityzen.com/company/aoquan
+apis:
+- name: Auquan API
+  description: Agentic AI platform API (no public machine‑readable contract discovered)
+  humanURL: https://www.auquan.com
+  baseURL: null
+  aid: aoquan:auquan-api
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The provider’s website is a static marketing site with no public API documentation or machine‑readable contract.
+  evidence:
+  - url: https://www.auquan.com
+    status: 200
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
